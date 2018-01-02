@@ -94,57 +94,60 @@ class App extends Component {
                 </TabPanel>
                 <TabPanel>
                     <div>
-                        <p className="App-intro">Welcome to the RSVP</p>
+                        <p className="info">Welcome to the RSVP</p>
                     </div>
 
                     <div>
-                        <img src={home_pic} className="App-main-pic" alt="logo"/>
+                        <p className="info">We really want to know if you are coming or not.</p>
                     </div>
                 </TabPanel>
                 <TabPanel>
                     <div>
-                        <p className="App-intro">Welcome to the Wedding Party</p>
+                        <p className="info">Welcome to the Wedding Party</p>
                     </div>
 
                     <div>
-                        <img src={home_pic} className="App-main-pic" alt="logo"/>
+                        <p className="info">There are 8 bride's maids and 8 groom's men.</p>
                     </div>
                 </TabPanel>
                 <TabPanel>
                     <div>
-                        <p className="App-intro">Welcome to the Events</p>
+                        <p className="info">Welcome to the Events</p>
                     </div>
 
                     <div>
-                        <img src={home_pic} className="App-main-pic" alt="logo"/>
+                        <p className="info">There is a wedding and a reception.
+                            One is at a church and the other is in an old brick factory.</p>
                     </div>
                 </TabPanel>
                 <TabPanel>
                     <div>
-                        <p className="App-intro">Welcome to the Photos</p>
+                        <p className="info">Welcome to the Photos</p>
                     </div>
 
                     <div>
-                        <img src={home_pic} className="App-main-pic" alt="logo"/>
+                        <p className="info">We took engagement photos and will add functionality for you to upload your own pictures
+                        from the wedding.</p>
                     </div>
                 </TabPanel>
 
                 <TabPanel>
                     <div>
-                        <p className="App-intro">Welcome to the Accomodations</p>
+                        <p className="info">Welcome to the Accommodations</p>
                     </div>
 
                     <div>
-                        <img src={home_pic} className="App-main-pic" alt="logo"/>
+                        <p className="info">We blocked some hotel rooms in Edwardsville that we recommend for you. The rooms are reserved
+                        at least until June.</p>
                     </div>
                 </TabPanel>
                 <TabPanel>
                     <div>
-                        <p className="App-intro">Welcome to the Gift Registry</p>
+                        <p className="info">Gift Registry info</p>
                     </div>
 
                     <div>
-                        <img src={home_pic} className="App-main-pic" alt="logo"/>
+                        <p className="info">We registered at Bed, Bath & Beyond and Kohl's. Both registries are under Allie Sweatt.</p>
                     </div>
                 </TabPanel>
             </Tabs>
