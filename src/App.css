@@ -1,0 +1,171 @@
+@import url(https://fonts.gstatic.com/l/font?kit=pR0sBQVcY0JZc_ciXjFsKxdoJ-YUu8DhxsZj7bxMwPsUb4LYMPcTSX6aWvVO1zr18HfGJJRciHTW6rzMCtl2tAYS0JbSrlPpAcQAgKgKHWGAelr1Hmn8fQq-YAsfrDa-HY0vVOFW4u_nTpYNaPBMUmFvwxr3bOaGfmogGVP-7oVeM3PhHDtjseqqZqAiULZQCeZ7RlOzZviKVC9dLZCI1KEsTYny56KMbo_ItmnR3KU&skey=1ccff9706b4dcbb3&v=v5);
+.App {
+  text-align: center;
+  background-color: #212b48
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-home-header {
+  height: 150px;
+  color: white;
+}
+
+.App-other-header {
+  height: 150px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.App-main-pic {
+  height: auto;
+  width: 70%;
+  border: 8px solid rgb(255,255,255);
+}
+
+.couple-names {
+  font-family: "Libre Baskerville script=all rev=1";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 17px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.couple-name-home {
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2;
+  text-transform: uppercase;
+  letter-spacing: 3.1px;
+  font-size: 2em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.names-flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.couple-name-other {
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 3.4px;
+  font-size: 3em;
+  color: #ffffff;
+  margin: 0;
+  display: inline;
+}
+
+.couple-and {
+  font-family: cursive;
+}
+
+.and-pic-div {
+  flex: 0 0 135px !important;
+  margin: 0 !important;
+}
+
+.and-pic {
+  heigth: auto;
+  width: 100px;
+}
+
+.hor-couple {
+  text-align: right !important;
+  flex: 0 1 auto !important;
+  margin-bottom: 0 !important;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky-tabs {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  padding: 20px 0 !important;
+  background-color: #212b48;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+
+  margin: 0;
+  list-style: none;
+}
+
+.sticky-selected-panel {
+  margin-top: 65px;
+}
+
+.react-tabs__tab-panel {
+}
+
+.react-tabs__tab-panel--selected {
+  margin-top: 3px;
+}
+
+.sticky-tabs + .content {
+  padding-top: 102px;
+}
+
+
+.react-tabs__tab-list {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  padding: 20px 0 !important;
+
+  margin: 0;
+  list-style: none;
+}
+
+.react-tabs__tab {
+  display: list-item;
+  text-align: -webkit-match-parent;
+
+  font-family: "Libre Baskerville script=all rev=1";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-size: 1em;
+  color: #fff;
+
+  margin: 0 15px !important;
+  padding: 0 !important;
+}
+
+.react-tabs__tab--selected {
+  font-size: 1.4em;
+  text-decoration: underline;
+}
+
