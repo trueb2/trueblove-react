@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import home_pic from './home_pic.png'
 import small_and_pic from './small_and.png';
 import './App.css';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import {Tab, TabList, TabPanel, Tabs} from 'react-tabs';
 
 class App extends Component {
     constructor(props) {
@@ -106,66 +106,127 @@ class App extends Component {
                     </div>
                 </TabPanel>
                 <TabPanel>
-                    <div>
-                        <p className="info">Welcome to the RSVP</p>
+                    <hr/>
+                    <div className='panelContent'>
+                        <div className='underlinedTabHeader'>
+                            <h2 className='story' style={{marginBottom: 30}}>You're Invited</h2>
+                            <div className='underlined'>
+                                <hr/>
+                            </div>
+                        </div>
                     </div>
-
-                    <div>
-                        <p className="info">We really want to know if you are coming or not.</p>
-                    </div>
+                    <hr/>
                 </TabPanel>
                 <TabPanel>
-                    <div>
-                        <p className="info">Welcome to the Wedding Party</p>
+                    <hr/>
+                    <div className='panelContent'>
+                        <div className='underlinedTabHeader'>
+                            <h2 className='story' style={{marginBottom: 30}}>Wedding Party</h2>
+                            <div className='underlined'>
+                                <hr/>
+                            </div>
+                        </div>
                     </div>
-
-                    <div>
-                        <p className="info">There are 8 bride's maids and 8 groom's men.</p>
-                    </div>
+                    <hr/>
                 </TabPanel>
                 <TabPanel>
-                    <div>
-                        <p className="info">Welcome to the Events</p>
-                    </div>
+                    <hr/>
+                    <div className='panelContent'>
+                        <div className='underlinedTabHeader'>
+                            <h2 className='story' style={{marginBottom: 30}}>Events</h2>
+                            <div className='underlined'>
+                                <hr/>
+                            </div>
+                        </div>
 
-                    <div>
-                        <p className="info">There is a wedding and a reception.
-                            One is at a church and the other is in an old brick factory.</p>
+                        <div className="events-container">
+                            <div className="events-row">
+                                <div className="events-block">
+                                    <div className="event-description">
+                                        <div className="event-marker">1</div>
+                                        <div className="event-name">Wedding Ceremony</div>
+                                        <p className="event-address">
+                                            3:00 PM on August 4th, 2018
+                                        </p>
+                                        <p className="event-address">
+                                            First Presbyterian Church of Edwardsville
+                                        </p>
+                                        <p className="event-address">
+                                            3577 Ridgeview Road
+                                            <br/>
+                                            Edwardsville, IL 62025
+                                        </p>
+                                        <a className="event-map-link" href="https://www.google.com/maps/place/3577+Ridge+View+Rd,+Edwardsville,+IL+62025/" >
+                                            Get Directions
+                                        </a>
+                                    </div>
+                                    <div className="event-description">
+                                        <div className="event-marker">2</div>
+                                        <div className="event-name">Wedding Reception</div>
+                                        <p className="event-address">
+                                            5:30 PM on August 4th, 2018
+                                        </p>
+                                        <p className="event-address">
+                                            Leclaire Room
+                                        </p>
+                                        <p className="event-address">
+                                            600 Troy Rd #109
+                                            <br/>
+                                            Edwardsville, IL 62025
+                                        </p>
+                                        <a className="event-map-link" href="https://www.google.com/maps/place/Leclaire+Room/@38.8061318,-89.9520998,17z/" >
+                                            Get Directions
+                                        </a>
+                                    </div>
+                                </div>
+                                {/*<div className="events-block">*/}
+                                    {/*<div className="events-map">*/}
+                                        {/*Google Map*/}
+                                    {/*</div>*/}
+                                {/*</div>*/}
+                            </div>
+                        </div>
                     </div>
+                    <hr/>
                 </TabPanel>
                 <TabPanel>
-                    <div>
-                        <p className="info">Welcome to the Photos</p>
+                    <hr/>
+                    <div className='panelContent'>
+                        <div className='underlinedTabHeader'>
+                            <h2 className='story' style={{marginBottom: 30}}>Photos</h2>
+                            <div className='underlined'>
+                                <hr/>
+                            </div>
+                        </div>
                     </div>
-
-                    <div>
-                        <p className="info">We took engagement photos and will add functionality for you to upload your own pictures
-                        from the wedding.</p>
-                    </div>
+                    <hr/>
                 </TabPanel>
 
                 <TabPanel>
-                    <div>
-                        <p className="info">Welcome to the Accommodations</p>
+                    <hr/>
+                    <div className='panelContent'>
+                        <div className='underlinedTabHeader'>
+                            <h2 className='story' style={{marginBottom: 30}}>Accommodations</h2>
+                            <div className='underlined'>
+                                <hr/>
+                            </div>
+                        </div>
                     </div>
-
-                    <div>
-                        <p className="info">We blocked some hotel rooms in Edwardsville that we recommend for you. The rooms are reserved
-                        at least until June.</p>
-                    </div>
+                    <hr/>
                 </TabPanel>
                 <TabPanel>
-                    <div>
-                        <p className="info">Gift Registry info</p>
+                    <hr/>
+                    <div className='panelContent'>
+                        <div className='underlinedTabHeader'>
+                            <h2 className='story' style={{marginBottom: 30}}>Registry Locations</h2>
+                            <div className='underlined'>
+                                <hr/>
+                            </div>
+                        </div>
                     </div>
-
-                    <div>
-                        <p className="info">We registered at Bed, Bath & Beyond and Kohl's. Both registries are under Allie Sweatt.</p>
-                    </div>
+                    <hr/>
                 </TabPanel>
             </Tabs>
-
-            <hr className='footerDivider'/>
         </div>
     );
     }

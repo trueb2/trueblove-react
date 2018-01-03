@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Great+Vibes|Libre+Baskerville');
 
+body {
+    font-family: "Libre Baskerville";
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+    text-transform: none;
+    letter-spacing: normal;
+    font-size: 16.8px;
+    margin: 0;
+    background-color: #1f2a4a;
+    background-image: none;
+    background-repeat: repeat;
+    background-position: left top;
+    color: #ffffff;
+}
 .App {
   text-align: center;
 }
@@ -81,6 +96,10 @@ font-family: 'Libre Baskerville', serif;
     width: 84%;
     margin: 0px auto;
     text-align: left;
+  }
+
+  .events-container {
+      margin: 0 8.3% !important;
   }
 }
 
@@ -206,9 +225,15 @@ font-family: 'Libre Baskerville', serif;
   list-style: none;
 }
 
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 .sticky-selected-panel {
   margin: 65px auto 0px;
   width: 85%;
+    animation: fadein 2s;
 }
 
 .react-tabs__tab-panel {
@@ -217,6 +242,7 @@ font-family: 'Libre Baskerville', serif;
 .react-tabs__tab-panel--selected {
   margin: 3px auto;
   width: 85%;
+    animation: fadein 2s;
 }
 
 .sticky-tabs + .content {
@@ -254,8 +280,8 @@ font-family: 'Libre Baskerville', serif;
 }
 
 .react-tabs__tab--selected {
-  font-size: 1.4em;
-  text-decoration: underline;
+    font-size: 1.4em;
+    text-decoration: underline;
 }
 
 .info {
@@ -266,4 +292,167 @@ font-family: 'Libre Baskerville', serif;
 
 .footerDivider {
   margin: 50px;
+}
+
+.underlinedTabHeader {
+    text-align: center;
+}
+
+.underlined {
+    display: inline-block;
+    margin-bottom: 30px;
+    width: 200px;
+    height: 50px;
+}
+
+.panelContent {
+    padding-top: 50px;
+}
+
+/* Events Tab*/
+
+@media (min-width: 768px) {
+    .events-container {
+        margin: 0 8.3% !important;
+    }
+}
+
+.events-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.events-block {
+    padding: 0 15px;
+    margin-left: 60px;
+}
+
+.event-description {
+    position: relative;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.event-marker {
+    position: absolute;
+    left: -60px;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #ffffff;
+    color: #1f2a4a;
+    cursor: pointer;
+    font-family: "Libre Baskerville", serif;
+    font-size: 19.2px;
+    display: flex;
+}
+
+.event-name {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-size: 17.6px;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+p.event-address {
+    margin: 1em 0;
+    font-size: 14px;
+}
+
+a.event-map-link {
+    font-family: "MrsEavesSmallCaps Regular";
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    width: initial;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 6px 0px;
+    text-decoration: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.events-map {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    border: 8px solid #ffffff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.events-map1 {
+    position: relative;
+    height: 400px;
+}
+
+.events-map2 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.events-map2-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.events-map3 {
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.resize-triggers {
+    animation: 1ms resizeanim;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.resize-triggers, .resize-triggers > div, .contract-trigger:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.events-map4 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(229, 227, 223);
 }
