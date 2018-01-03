@@ -90,6 +90,19 @@ class App extends Component {
                 <TabPanel>
                     <div>
                         <img src={home_pic} className="App-main-pic" alt="logo"/>
+                        <h3 className="announcement">Please join us for our wedding celebration on</h3>
+                        <time className="wedding-date" dateTime="08-04-2018">
+                            August 4th, 2018
+                        </time>
+                        <div className='story-container'>
+                            <h2 className='story'>Our Story</h2>
+                            <p>
+                                <span className='story'>Allie and Jacob met in middle school.</span>
+                            </p>
+                            <p>
+                                <span className='story'>They have been together ever since 2010.</span>
+                            </p>
+                        </div>
                     </div>
                 </TabPanel>
                 <TabPanel>
@@ -151,6 +164,8 @@ class App extends Component {
                     </div>
                 </TabPanel>
             </Tabs>
+
+            <hr className='footerDivider'/>
         </div>
     );
     }

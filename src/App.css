@@ -1,4 +1,4 @@
-@import url(https://fonts.gstatic.com/l/font?kit=pR0sBQVcY0JZc_ciXjFsKxdoJ-YUu8DhxsZj7bxMwPsUb4LYMPcTSX6aWvVO1zr18HfGJJRciHTW6rzMCtl2tAYS0JbSrlPpAcQAgKgKHWGAelr1Hmn8fQq-YAsfrDa-HY0vVOFW4u_nTpYNaPBMUmFvwxr3bOaGfmogGVP-7oVeM3PhHDtjseqqZqAiULZQCeZ7RlOzZviKVC9dLZCI1KEsTYny56KMbo_ItmnR3KU&skey=1ccff9706b4dcbb3&v=v5);
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Libre+Baskerville');
 
 .App {
   text-align: center;
@@ -29,12 +29,99 @@
 
 .App-main-pic {
   height: auto;
-  width: 70%;
+  width: 100%;
   border: 8px solid rgb(255,255,255);
+  margin-bottom: 30px;
+}
+
+h3.announcement {
+  font-family: 'Libre Baskerville', serif;
+  font-weight:400;
+  font-style:normal;
+  line-height:1.4;
+  text-transform:uppercase;
+  letter-spacing:2.3px;
+  font-size:16px;
+  color:#ffffff;
+  margin:0;
+  margin-bottom: 20px;
+}
+
+time.wedding-date {
+font-family: 'Libre Baskerville', serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 1.9px;
+  font-size: 19.2px;
+  color: #ffffff;
+}
+
+@media (min-width: 544px) {
+  time.wedding-date {
+    font-size: 22.4px !important;
+  }
+
+  h2.story {
+    font-size: 33.6px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  time.wedding-date {
+    font-size: 25.6px !important;
+  }
+
+  h2.story {
+    font-size: 38.4px !important;
+  }
+
+  .story-container {
+    width: 84%;
+    margin: 0px auto;
+    text-align: left;
+  }
+}
+
+@media (min-width: 992px) {
+  time.wedding-date {
+    font-size: 28.8px !important;
+  }
+
+  h2.story {
+    font-size: 43.2px !important;
+  }
+
+}
+
+h2.story {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: normal;
+  font-size: 28.8px;
+  color: #ffffff;
+  margin: 50px 0px 50px 0px;
+}
+
+span.story {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 16.8px;
+  color: #ffffff;
+  text-align: left;
 }
 
 .couple-names {
-  font-family: "Libre Baskerville script=all rev=1";
+font-family: 'Libre Baskerville', serif;
   font-weight: 400;
   font-style: normal;
   line-height: 1.6;
@@ -120,20 +207,21 @@
 }
 
 .sticky-selected-panel {
-  margin-top: 65px;
+  margin: 65px auto 0px;
+  width: 85%;
 }
 
 .react-tabs__tab-panel {
 }
 
 .react-tabs__tab-panel--selected {
-  margin-top: 3px;
+  margin: 3px auto;
+  width: 85%;
 }
 
 .sticky-tabs + .content {
   padding-top: 102px;
 }
-
 
 .react-tabs__tab-list {
   display: flex !important;
@@ -151,7 +239,7 @@
   display: list-item;
   text-align: -webkit-match-parent;
 
-  font-family: "Libre Baskerville script=all rev=1";
+  font-family: 'Libre Baskerville', serif;
   font-weight: 400;
   font-style: normal;
   line-height: 1;
@@ -159,6 +247,7 @@
   letter-spacing: 1.3px;
   font-size: 1em;
   color: #fff;
+  cursor: pointer;
 
   margin: 0 15px !important;
   padding: 0 !important;
@@ -170,8 +259,11 @@
 }
 
 .info {
-  font-family: "Libre Baskerville script=all rev=1";
+  font-family: 'Libre Baskerville', serif;
   color: #eee;
   line-height: 1.2;
 }
 
+.footerDivider {
+  margin: 50px;
+}
