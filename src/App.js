@@ -29,7 +29,7 @@ class App extends Component {
             tabs.className = 'sticky-tabs';
             tab_panel.className = 'sticky-selected-panel';
         } else {
-            tabs.className = 'react-tabs__tab--list';
+            tabs.className = 'react-tabs__tab-list';
             tab_panel.className = 'react-tabs__tab-panel--selected';
         }
     }
@@ -79,12 +79,13 @@ class App extends Component {
                 onSelect={this.onSelectTab.bind(this)}>
                 <TabList>
                     <Tab> Home </Tab>
-                    <Tab> RSVP </Tab>
-                    <Tab> Wedding Party </Tab>
+                    {/*<Tab> RSVP </Tab>*/}
+                    {/*<Tab> Wedding Party </Tab>*/}
                     <Tab> Events </Tab>
-                    <Tab> Photos</Tab>
-                    <Tab> Accommodations </Tab>
+                    {/*<Tab> Photos</Tab>*/}
+                    {/*<Tab> Accommodations </Tab>*/}
                     <Tab> Gift Registry </Tab>
+                    <Tab> More </Tab>
                 </TabList>
 
                 <TabPanel>
@@ -97,38 +98,55 @@ class App extends Component {
                         <div className='story-container'>
                             <h2 className='story'>Our Story</h2>
                             <p>
-                                <span className='story'>Allie and Jacob met in middle school.</span>
+                                <span className='story'>
+                                    One second, we were running around in a creek.
+                                    The next, Jacob was giving me his jacket.
+                                    Then, I called him, demanding to know if we were Facebook official so I could
+                                    change my status.
+                                </span>
+                            </p>
+
+                            <p>
+                                <span className="story">
+                                    Fast forward through high school, years of running, baseball, homecomings, proms,
+                                    hallway locker conversations, and growing up. We grew together, not apart.
+                                    Even going to college three hours from each other couldn't keep us apart.
+                                    Constantly seeking one another during the good times and the bad.
+                                </span>
                             </p>
                             <p>
-                                <span className='story'>They have been together ever since 2010.</span>
+                                <span className='story'>
+                                    With one year left of distance and gearing up for our next big adventure,
+                                    Jacob proposed. We knew it was Trueb Love all along.
+                                </span>
                             </p>
                         </div>
                     </div>
                 </TabPanel>
-                <TabPanel>
-                    <hr/>
-                    <div className='panelContent'>
-                        <div className='underlinedTabHeader'>
-                            <h2 className='story' style={{marginBottom: 30}}>You're Invited</h2>
-                            <div className='underlined'>
-                                <hr/>
-                            </div>
-                        </div>
-                    </div>
-                    <hr/>
-                </TabPanel>
-                <TabPanel>
-                    <hr/>
-                    <div className='panelContent'>
-                        <div className='underlinedTabHeader'>
-                            <h2 className='story' style={{marginBottom: 30}}>Wedding Party</h2>
-                            <div className='underlined'>
-                                <hr/>
-                            </div>
-                        </div>
-                    </div>
-                    <hr/>
-                </TabPanel>
+                {/*<TabPanel>*/}
+                    {/*<hr/>*/}
+                    {/*<div className='panelContent'>*/}
+                        {/*<div className='underlinedTabHeader'>*/}
+                            {/*<h2 className='story' style={{marginBottom: 30}}>You're Invited</h2>*/}
+                            {/*<div className='underlined'>*/}
+                                {/*<hr/>*/}
+                            {/*</div>*/}
+                        {/*</div>*/}
+                    {/*</div>*/}
+                    {/*<hr/>*/}
+                {/*</TabPanel>*/}
+                {/*<TabPanel>*/}
+                    {/*<hr/>*/}
+                    {/*<div className='panelContent'>*/}
+                        {/*<div className='underlinedTabHeader'>*/}
+                            {/*<h2 className='story' style={{marginBottom: 30}}>Wedding Party</h2>*/}
+                            {/*<div className='underlined'>*/}
+                                {/*<hr/>*/}
+                            {/*</div>*/}
+                        {/*</div>*/}
+                    {/*</div>*/}
+                    {/*<hr/>*/}
+                {/*</TabPanel>*/}
                 <TabPanel>
                     <hr/>
                     <div className='panelContent'>
@@ -189,31 +207,30 @@ class App extends Component {
                     </div>
                     <hr/>
                 </TabPanel>
-                <TabPanel>
-                    <hr/>
-                    <div className='panelContent'>
-                        <div className='underlinedTabHeader'>
-                            <h2 className='story' style={{marginBottom: 30}}>Photos</h2>
-                            <div className='underlined'>
-                                <hr/>
-                            </div>
-                        </div>
-                    </div>
-                    <hr/>
-                </TabPanel>
-
-                <TabPanel>
-                    <hr/>
-                    <div className='panelContent'>
-                        <div className='underlinedTabHeader'>
-                            <h2 className='story' style={{marginBottom: 30}}>Accommodations</h2>
-                            <div className='underlined'>
-                                <hr/>
-                            </div>
-                        </div>
-                    </div>
-                    <hr/>
-                </TabPanel>
+                {/*<TabPanel>*/}
+                    {/*<hr/>*/}
+                    {/*<div className='panelContent'>*/}
+                        {/*<div className='underlinedTabHeader'>*/}
+                            {/*<h2 className='story' style={{marginBottom: 30}}>Photos</h2>*/}
+                            {/*<div className='underlined'>*/}
+                                {/*<hr/>*/}
+                            {/*</div>*/}
+                        {/*</div>*/}
+                    {/*</div>*/}
+                    {/*<hr/>*/}
+                {/*</TabPanel>*/}
+                {/*<TabPanel>*/}
+                    {/*<hr/>*/}
+                    {/*<div className='panelContent'>*/}
+                        {/*<div className='underlinedTabHeader'>*/}
+                            {/*<h2 className='story' style={{marginBottom: 30}}>Accommodations</h2>*/}
+                            {/*<div className='underlined'>*/}
+                                {/*<hr/>*/}
+                            {/*</div>*/}
+                        {/*</div>*/}
+                    {/*</div>*/}
+                    {/*<hr/>*/}
+                {/*</TabPanel>*/}
                 <TabPanel>
                     <hr/>
                     <div className='panelContent'>
@@ -262,11 +279,29 @@ class App extends Component {
                                         <i> Allie & Jacob's Wedding Registry</i>. The registry number is <i>3386573</i>.
                                     </p>
                                 </div>
-                                <a className='registry-link' href='https://google.com'>View Registry</a>
+                                <a className='registry-link' href='https://www.kohls.com/gift-registry/wedding-registry.jsp'>View Registry</a>
                             </div>
-
-
                         </div>
+                    </div>
+                    <hr/>
+                </TabPanel>
+                <TabPanel>
+                    <hr/>
+                    <div className='panelContent'>
+                        <div className='underlinedTabHeader'>
+                            <h2 className='story' style={{marginBottom: 30}}>Still Under Construction</h2>
+                            <div className='underlined'>
+                                <hr/>
+                            </div>
+                        </div>
+                        <p style={{marginBottom: 30}}>We still have several additions coming to this website including:
+                        </p>
+                        <p style={{marginBottom: 30}}>
+                            <i>RSVP, Accommodations,
+                                Photos, and Wedding Party</i>
+                        </p>
+
+                        <p style={{marginBottom: 60}}> Please visit us again in a couple weeks for an update.</p>
                     </div>
                     <hr/>
                 </TabPanel>
