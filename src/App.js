@@ -253,12 +253,13 @@ class App extends Component {
                                 </div>
                                 <div className='location-description'>
                                     <p className='location-description-text'>
-                                        There are plenty of important items on the Kohl's registry as well. Good luck
-                                        accessing the registry on their website. Hopefully, there is location near you.
+                                        There are plenty of important items on the Kohl's registry as well. The Kohl's
+                                        phone app can be used to view the registry electronically. You can also print
+                                        the registry at a location near you.
                                     </p>
                                     <p className='location-description-text'>
                                         We are registered under Allie Sweatt, and the name of registry is
-                                        <i> Allie & Jacob's Wedding Registry</i>. The registry number is <i>R3386573</i>.
+                                        <i> Allie & Jacob's Wedding Registry</i>. The registry number is <i>3386573</i>.
                                     </p>
                                 </div>
                                 <a className='registry-link' href='https://google.com'>View Registry</a>
