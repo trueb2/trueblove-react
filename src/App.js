@@ -101,7 +101,7 @@ class App extends Component {
                                 <span className='story'>
                                     One second, we were running around in a creek.
                                     The next, Jacob was giving me his jacket.
-                                    Then, I called him, demanding to know if we were Facebook official so I could
+                                    Then, I called him, eager to know if we were Facebook official, so I could
                                     change my status.
                                 </span>
                             </p>
@@ -109,7 +109,7 @@ class App extends Component {
                             <p>
                                 <span className="story">
                                     Fast forward through high school, years of running, baseball, homecomings, proms,
-                                    hallway locker conversations, and growing up. We grew together, not apart.
+                                    hallway locker conversations, and growing up. We grew together.
                                     Even going to college three hours from each other couldn't keep us apart.
                                     Constantly seeking one another during the good times and the bad.
                                 </span>
@@ -121,6 +121,7 @@ class App extends Component {
                                 </span>
                             </p>
                         </div>
+                        <hr/>
                     </div>
                 </TabPanel>
                 {/*<TabPanel>*/}
