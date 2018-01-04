@@ -19,7 +19,7 @@ class App extends Component {
     }
 
     handleScroll(event) {
-        let body = event.srcElement.body;
+        let body = (event.target || event.srcElement).body;
         let tabs = body.children[1].children[0].children[1].children[0];
         let tab_panel = body.children[1].children[0].children[1].children[this.state.tabIndex + 1];
         let tab_rect = tabs.getBoundingClientRect();
@@ -29,7 +29,7 @@ class App extends Component {
             tabs.className = 'sticky-tabs';
             tab_panel.className = 'sticky-selected-panel';
         } else {
-            tabs.className = 'react-tabs__tab-list';
+            tabs.className = 'react-tabs__tab--list';
             tab_panel.className = 'react-tabs__tab-panel--selected';
         }
     }
@@ -60,7 +60,7 @@ class App extends Component {
                   </div>
               </header>
               :
-              <header className="App-other-header">
+              <header style={{animation: 'fadein 1s'}} className="App-other-header">
                   <div className="couple-names names-flex-row">
                       <div style={{order: 1}} className="hor-couple">
                         <h1 className="couple-name-other">Allie</h1>
@@ -142,7 +142,7 @@ class App extends Component {
                         <div className="events-container">
                             <div className="events-row">
                                 <div className="events-block">
-                                    <div className="event-description">
+                                    <div style={{animation: 'fadeInLeft 2s'}} className="event-description">
                                         <div className="event-marker">1</div>
                                         <div className="event-name">Wedding Ceremony</div>
                                         <p className="event-address">
@@ -160,7 +160,7 @@ class App extends Component {
                                             Get Directions
                                         </a>
                                     </div>
-                                    <div className="event-description">
+                                    <div style={{animation: 'fadeInRight 2s'}} className="event-description">
                                         <div className="event-marker">2</div>
                                         <div className="event-name">Wedding Reception</div>
                                         <p className="event-address">
@@ -222,6 +222,49 @@ class App extends Component {
                             <div className='underlined'>
                                 <hr/>
                             </div>
+                        </div>
+
+                        <div className='registry-container'>
+                            <div style={{animation: 'fadeInLeft 2s'}} className='registry-location'>
+                                <div className='location-name'>
+                                    Bed, Bath & Beyond
+                                </div>
+                                <div className='location-description'>
+                                    <p className='location-description-text'>
+                                        This registry is larger than the Kohl's registry. A virtual copy is available at
+                                        the link below, and a physical copy can be printed in store.
+                                    </p>
+                                    <p className='location-description-text'>
+                                        We are registered under Allie Sweatt or Jacob Trueb.
+                                        The name of registry is <i>Allie Sweatt & Jacob Trueb's</i> and
+                                        the registry number is <i>545283690</i>.
+                                    </p>
+                                </div>
+                                <a className='registry-link' href='https://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&inventoryCallEnabled=true&registryId=545283690&pwsurl='>View Registry</a>
+                            </div>
+
+                            <div className='underlined'>
+                                <hr/>
+                            </div>
+
+                            <div style={{animation: 'fadeInRight 2s'}} className='registry-location'>
+                                <div className='location-name'>
+                                    Kohl's
+                                </div>
+                                <div className='location-description'>
+                                    <p className='location-description-text'>
+                                        There are plenty of important items on the Kohl's registry as well. Good luck
+                                        accessing the registry on their website. Hopefully, there is location near you.
+                                    </p>
+                                    <p className='location-description-text'>
+                                        We are registered under Allie Sweatt, and the name of registry is
+                                        <i> Allie & Jacob's Wedding Registry</i>. The registry number is <i>R3386573</i>.
+                                    </p>
+                                </div>
+                                <a className='registry-link' href='https://google.com'>View Registry</a>
+                            </div>
+
+
                         </div>
                     </div>
                     <hr/>

@@ -184,8 +184,8 @@ font-family: 'Libre Baskerville', serif;
 }
 
 .couple-and {
-  font-family: cursive;
-}
+    font-family: Great Vibes, cursive;
+    font-size: 1.2em;}
 
 .and-pic-div {
   flex: 0 0 135px !important;
@@ -220,6 +220,7 @@ font-family: 'Libre Baskerville', serif;
   padding: 20px 0 !important;
   background-color: #212b48;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+    z-index: 10;
 
   margin: 0;
   list-style: none;
@@ -229,6 +230,29 @@ font-family: 'Libre Baskerville', serif;
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 .sticky-selected-panel {
   margin: 65px auto 0px;
@@ -249,7 +273,7 @@ font-family: 'Libre Baskerville', serif;
   padding-top: 102px;
 }
 
-.react-tabs__tab-list {
+.react-tabs__tab--list {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
@@ -259,6 +283,7 @@ font-family: 'Libre Baskerville', serif;
 
   margin: 0;
   list-style: none;
+    z-index: 10;
 }
 
 .react-tabs__tab {
@@ -277,6 +302,12 @@ font-family: 'Libre Baskerville', serif;
 
   margin: 0 15px !important;
   padding: 0 !important;
+}
+
+@media (max-width: 1138px) {
+    .react-tabs__tab {
+        line-height: 2;
+    }
 }
 
 .react-tabs__tab--selected {
@@ -455,4 +486,63 @@ a.event-map-link {
     top: 0px;
     left: 0px;
     background-color: rgb(229, 227, 223);
+}
+
+/*
+Registry related styles
+ */
+.registry-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.registry-location {
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+
+.location-name {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-size: 17.6px;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.location-description {
+}
+
+p.location-description-text {
+    margin: 1em 0;
+    font-size: 14px;
+}
+
+a.registry-link {
+    font-family: "MrsEavesSmallCaps Regular";
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    width: initial;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 6px 0px;
+    text-decoration: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    background-color: transparent;
 }
