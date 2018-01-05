@@ -166,18 +166,18 @@ class App extends Component {
                                             <div className="event-marker">1</div>
                                             <div className="event-name">Wedding Ceremony</div>
                                             <p className="address">
-                                                3:00 PM on August 4th, 2018
+                                                3:30 PM on August 4th, 2018
                                             </p>
                                             <p className="address">
                                                 First Presbyterian Church of Edwardsville
                                             </p>
                                             <p className="address">
-                                                3577 Ridgeview Road
+                                                3601 Ridgeview Road
                                                 <br/>
                                                 Edwardsville, IL 62025
                                             </p>
                                             <a className="event-map-link"
-                                               href="https://www.google.com/maps/place/3577+Ridge+View+Rd,+Edwardsville,+IL+62025/">
+                                               href="https://www.google.com/maps/place/3601+Ridge+View+Rd,+Edwardsville,+IL+62025/">
                                                 Get Directions
                                             </a>
                                         </div>
