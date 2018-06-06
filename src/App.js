@@ -3,11 +3,14 @@ import home_pic from './home_pic.png'
 import small_and_pic from './small_and.png';
 import './App.css';
 import {Tab, TabList, TabPanel, Tabs} from 'react-tabs';
+import $ from 'jquery';
 
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {home: true, tabIndex: 0};
+        this.state = {home: true, tabIndex: 0, attending: true,
+           count02: 0, count35: 0, count612:0, countAdults: 0,
+         under3: [], under6: [], under13: [], adults: []};
     }
 
     componentDidMount() {
@@ -34,8 +37,111 @@ class App extends Component {
         }
     }
 
+    handleAttending(event) {
+      this.setState({attending: event.target.checked})
+    }
+
+    handleCount02(event) {
+      this.setState({count02: parseInt(event.target.value)});
+      this.setState({under3:  Array(parseInt(event.target.value)).fill('')});
+    }
+
+    handleCount02Change = (idx) => {
+       return (event) => {
+        this.state.under3[idx] = event.target.value;
+        this.setState({under3: this.state.under3});
+      }
+    }
+
+    handleCount35(event) {
+      this.setState({count35: parseInt(event.target.value)});
+      this.setState({under6:  Array(parseInt(event.target.value)).fill('')});
+    }
+
+    handleCount35Change = (idx) => {
+       return (event) => {
+        this.state.under6[idx] = event.target.value;
+        this.setState({under6: this.state.under6});
+      }
+    }
+
+    handleCount612(event) {
+      this.setState({count612: parseInt(event.target.value)});
+      this.setState({under13:  Array(parseInt(event.target.value)).fill('')});
+    }
+
+    handleCount612Change = (idx) => {
+       return (event) => {
+        this.state.under13[idx] = event.target.value;
+        this.setState({under13: this.state.under13});
+      }
+    }
+
+    handleCountAdults(event) {
+      this.setState({countAdults: parseInt(event.target.value)});
+      this.setState({adults:  Array(parseInt(event.target.value)).fill('')});
+    }
+
+    handleCountAdultsChange = (idx) => {
+       return (event) => {
+        this.state.adults[idx] = event.target.value;
+        this.setState({adults: this.state.adults});
+      }
+    }
+
+    renderCount02NameInputs() {
+      return this.state.under3.map((x,i) => {
+          return <input key={i} type='text' name="under3[]" value={this.state.under3[i]} onChange={this.handleCount02Change(i).bind(this)} />
+      });
+    }
+
+    renderCount35NameInputs() {
+      const tmpArray = [...Array(this.state.count35)];
+      return tmpArray.map((x,i) => {
+          return <input key={i} type='text' name="under6[]" value={this.state.under6[i]} onChange={this.handleCount35Change(i).bind(this)} />
+      });
+    }
+
+    renderCount612NameInputs() {
+      const tmpArray = [...Array(this.state.count612)];
+      return tmpArray.map((x,i) => {
+          return <input key={i} type='text' name="under13[]" value={this.state.under13[i]} onChange={this.handleCount612Change(i).bind(this)} />
+      });
+    }
+
+    renderCountAdultsNameInputs() {
+      const tmpArray = [...Array(this.state.countAdults)];
+      return tmpArray.map((x,i) => {
+          return <input key={i} type='text' name="adults[]" value={this.state.adults[i]} onChange={this.handleCountAdultsChange(i).bind(this)} />
+      });
+    }
+
+    handleSubmit(event) {
+      event.preventDefault();
+
+      console.log(this.state.under3);
+      console.log(this.state.under6);
+      console.log(this.state.under13);
+      console.log(this.state.adults);
+
+      $.post({
+        url: 'https://trueblove.jacobtrueb.com/answers',
+        data: {
+          'answer': {
+            'under3': this.state.under3,
+            'under6': this.state.under6,
+            'under13': this.state.under13,
+            'adults': this.state.adults,
+            'attending': this.state.attending
+          }
+        },
+        success: function(data) {
+          alert('Success');
+        }.bind(this)
+      });
+    }
+
     onSelectTab(index, lastIndex, event) {
-        console.log(index);
         if (index === 0 && lastIndex !== 0) {
             this.setState({tabIndex: index, home: true});
         } else if (lastIndex === 0 && index !== 0) {
@@ -79,7 +185,7 @@ class App extends Component {
                     onSelect={this.onSelectTab.bind(this)}>
                     <TabList>
                         <Tab> Home </Tab>
-                        {/*<Tab> RSVP </Tab>*/}
+                        <Tab> RSVP </Tab>
                         {/*<Tab> Wedding Party </Tab>*/}
                         <Tab> Events </Tab>
                         {/*<Tab> Photos</Tab>*/}
@@ -111,7 +217,7 @@ class App extends Component {
                                 <span className="story">
                                     Fast forward through high school, years of running, baseball, homecomings, proms,
                                     hallway locker conversations, and growing up. We grew together.
-                                    Even going to college three hours from each other couldn't keep us apart.
+                                    Even going to college three hours from each other couldn'/*'*/t keep us apart.
                                     Constantly seeking one another during the good times and the bad.
                                 </span>
                                 </p>
@@ -125,18 +231,88 @@ class App extends Component {
                             <hr/>
                         </div>
                     </TabPanel>
-                    {/*<TabPanel>*/}
-                    {/*<hr/>*/}
-                    {/*<div className='panelContent'>*/}
-                    {/*<div className='underlinedTabHeader'>*/}
-                    {/*<h2 className='story' style={{marginBottom: 30}}>You're Invited</h2>*/}
-                    {/*<div className='underlined'>*/}
-                    {/*<hr/>*/}
-                    {/*</div>*/}
-                    {/*</div>*/}
-                    {/*</div>*/}
-                    {/*<hr/>*/}
-                    {/*</TabPanel>*/}
+                    <TabPanel>
+                    <hr/>
+                    <div className='panelContent'>
+                    <div className='underlinedTabHeader'>
+                    <h2 className='story' style={{marginBottom: 30}}>RSVP</h2>
+                    <div className='underlined'>
+                    <hr/>
+
+                    <div className='rsvp-container'>
+                      <div className='rsvp-form'>
+                        <form  onSubmit={this.handleSubmit.bind(this)}>
+                        <input type="checkbox" name="attending" checked={this.state.attending} onChange={this.handleAttending.bind(this)} />
+                        Attending <br/>
+                          <div className='form-row'>
+                            <label>Small persons aged 0-2 years of age
+                              <select className='rsvpSelect' value={this.state.count02} onChange={this.handleCount02.bind(this)}>
+                                <option value='0'>0</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                              </select>
+                            </label>
+                            {this.renderCount02NameInputs()}
+                          </div>
+
+                          <div className='form-row'>
+                            <label>Small persons aged 3-5 years of age
+                              <select className='rsvpSelect' value={this.state.count35} onChange={this.handleCount35.bind(this)}>
+                                <option value='0'>0</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                                <option value='5'>5</option>
+                                <option value='6'>6</option>
+                              </select>
+                            </label>
+                            {this.renderCount35NameInputs()}
+                          </div>
+
+                          <div className='form-row'>
+                            <label>Small persons aged 6-12 years of age
+                              <select className='rsvpSelect' value={this.state.count612} onChange={this.handleCount612.bind(this)}>
+                                <option value='0'>0</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                                <option value='5'>5</option>
+                                <option value='6'>6</option>
+                              </select>
+                            </label>
+                            {this.renderCount612NameInputs()}
+                          </div>
+
+                          <div className='form-row'>
+                            <label>Persons 13 and older
+                              <select className='rsvpSelect' value={this.state.countAdults} onChange={this.handleCountAdults.bind(this)}>
+                                <option value='0'>0</option>
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                                <option value='5'>5</option>
+                                <option value='6'>6</option>
+                              </select>
+                            </label>
+                            {this.renderCountAdultsNameInputs()}
+                          </div>
+
+
+                          <input type="submit" value="Submit" />
+                        </form>
+                      </div>
+                    </div>
+
+                    </div>
+                    </div>
+                    </div>
+                    <hr/>
+                    </TabPanel>
                     {/*<TabPanel>*/}
                     {/*<hr/>*/}
                     {/*<div className='panelContent'>*/}
