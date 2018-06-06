@@ -137,6 +137,7 @@ class App extends Component {
         },
         success: function(data) {
           alert('Success');
+          this.setState({count02: 0, count35: 0, count612: 0, countAdults:0, attending: true});
         }.bind(this)
       });
     }
